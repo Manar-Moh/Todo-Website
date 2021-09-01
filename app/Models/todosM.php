@@ -11,5 +11,8 @@ class todosM extends Model
     use HasFactory;
 
    protected $table = 'todos_tables';
+   protected $attributes = [
+    'completed' => false,
+    ];
 
 }

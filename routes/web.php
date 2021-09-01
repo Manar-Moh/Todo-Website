@@ -20,3 +20,15 @@ Route::get('/', function () { return view('welcome');});
 Route::get('/Todos',[todosController::class, 'index']);
 
 Route::get('/Todos/{todorequest}',[todosController::class, 'show']);
+
+Route::get('/create',[todosController::class, 'create']);
+
+Route::post('/create',[todosController::class, 'store']);
+
+Route::get('/Todos/{todorequest}/edit',[todosController::class, 'edit']);
+
+Route::post('/Todos/{todorequest}',[todosController::class, 'update']);
+
+Route::get('/Todos/{todorequest}/delete',[todosController::class, 'delete']);
+
+Route::get('/Todos/{todorequest}/complete',[todosController::class, 'complete']);
